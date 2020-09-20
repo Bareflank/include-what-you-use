@@ -528,10 +528,10 @@ void IwyuPreprocessorInfo::AddDirectInclude(
   // iwyu_output.cc gets upset if a file is its own associated header.
   if (includer == main_file_ && includee != includer &&
       BelongsToMainCompilationUnit(includer, includee)) {
-    GetFromFileInfoMap(includer)
-        ->AddAssociatedHeader(GetFromFileInfoMap(includee));
-    VERRS(4) << "Marked " << GetFilePath(includee)
-             << " as associated header of " << GetFilePath(includer) << ".\n";
+    //GetFromFileInfoMap(includer)
+    //    ->AddAssociatedHeader(GetFromFileInfoMap(includee));
+    //VERRS(4) << "Marked " << GetFilePath(includee)
+    //         << " as associated header of " << GetFilePath(includer) << ".\n";
 
     // All associated headers need to be included in IWYU analysis.
     // We can only get here if IWYU is invoked with an absolute source path and
